@@ -220,16 +220,16 @@ const showProducts = (products) => {
     div.innerHTML = `
     <div class="col single-product">
     <div class="card h-100">
-      <img src=${image} class=" mx-auto py-2 product-image " alt="...">
+      <img src=${image} class=" mx-auto pt-2 product-image " alt="...">
       <div class="card-body">
         <h5 class="card-title">${product.title}</h5>
-        <p>Category: ${product.category}</p>
-        <p>Rating: ${product.rating.rate}</p>
-        <p>${product.rating.count} Ratings </p>
+        <p>Category: ${product.category}</br>
+        Rating: ${product.rating.rate} out of 5</br>
+        ${product.rating.count} Ratings </p>
         </div>
         <div class ="mb-3">
         <h4>Price: <span class="text-danger">$ ${product.price}</span></h4>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary px-4">add to cart</button>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary px-4">Add to cart</button>
       <button id="details-btn" class="btn btn-info px-5 text-white">Details</button>
       </div>
     </div>
